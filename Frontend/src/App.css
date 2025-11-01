@@ -7,530 +7,65 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-* {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  overflow: hidden;
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: #f4efe6 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 @font-face {
   font-family: Telma-Regular;
-  src: url(/public/fonts/Telma_Complete/Fonts/OTF/Telma-Regular.otf);
+  src: url(D:\WorkSpace\E-Commerce-Website\Frontend\public\fonts\Telma_Complete\Fonts\OTF\Telma-Regular.otf);
 }
 
 @font-face {
   font-family: Supreme-Regular;
-  src: url(/public/fonts/Supreme_Complete/Fonts/OTF/Supreme-Regular.otf);
+  src: url(D:\WorkSpace\E-Commerce-Website\Frontend\public\fonts\Supreme_Complete\Fonts\OTF\Supreme-Regular.otf);
 }
 
 @font-face {
-  font-family: Britney_Regular;
-  src: url(/public/fonts/Britney_Complete/Fonts/OTF/Britney-Regular.otf);
+  font-family: Cabinet-Regular;
+  src: url(D:\WorkSpace\E-Commerce-Website\Frontend\public\fonts\CabinetGrotesk_Complete\Fonts\OTF\CabinetGrotesk-Bold.otf);
 }
 
 @font-face {
-  font-family: BespokeStencil_Complete;
-  src: url(/public/fonts/BespokeStencil_Complete/Fonts/OTF/BespokeStencil-Regular.otf);
+  font-family: Sharpie;
+  src: url(D:\WorkSpace\E-Commerce-Website\Frontend\public\fonts\Sharpie_Complete\Fonts\OTF\Sharpie-Light.otf);
 }
 
-#nav-parent {
-  height: 5vw;
-  width: 100%;
-  /* margin-top: 1.5vw; */
-  background-color: #161616;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+@font-face {
+  font-family: BespokeStencil;
+  src: url(D:\WorkSpace\E-Commerce-Website\Frontend\public\fonts\BespokeStencil_Complete\Fonts\OTF\BespokeStencil-Regular.otf);
 }
 
-#nav-parent h1 {
-  width: 20%;
-  padding: 0.5vw;
-  font-size: 2.5vw;
-  font-weight: 500;
-  letter-spacing: 2px;
-  font-family: Telma-Regular;
+@font-face {
+  font-family: Britney;
+  src: url(D:\WorkSpace\E-Commerce-Website\Frontend\public\fonts\Britney_Complete\Fonts\OTF\Britney-Regular.otf);
 }
 
-#nav-parent h2 {
-  position: absolute;
-  top: 10.5%;
-  left: 15.5%;
-  font-weight: 500;
-}
+/* All CSS has been modularized into component-specific files. This file is intentionally left blank. */
 
-#nav-parent h3 {
-  font-size: 0.8vw;
-  font-family: Supreme-Regular;
-  position: absolute;
-  bottom: 4%;
-  left: 11%;
-}
-
-#nav-parent h4 {
-  /* padding: 2vw; */
-  height: 100%;
-  /* width: 15%; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right: 2px solid #2e2e2e;
-  cursor: pointer;
-  font-family: BespokeStencil_Complete;
-  font-size: 1.7vw;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.962);
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s linear;
-}
-
-#nav-parent h4::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-color: cyan;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  z-index: -1;
-  transition: all 0.75s linear;
-  opacity: 0.8;
-}
-
-#nav-parent h4:hover {
-  color: black;
-  /* border: 2px solid rgb(189, 23, 23); */
-}
-
-#nav-parent h4:hover::after {
-  transform: translate(-50%, -50%) scale(2);
-}
-
-#nav-parent h5 {
-  cursor: pointer;
-  font-size: 2.5vw;
-  font-weight: 400;
-}
-
-#nav-parent h4:nth-last-of-type(1) {
-  width: 10%;
-  font-size: 1.5vw;
-}
-
-#nav-parent h4:nth-last-of-type(2) {
-  width: 8%;
-}
-
-#nav-parent h4:nth-last-of-type(3) {
-  border-right: none;
-  width: 8%;
-}
-
-#nav-parent h4:nth-last-of-type(4) {
-  /* border-right: none; */
-  width: 8%;
-}
-
-#nav-parent i{
-  font-size: 3vw;
-  color: #fff;
-  /* margin-right: 1vw; */
-  width: 8%;
-  cursor: pointer;
-}
-
-#nav-parent input {
-  height: 2.5vw;
-  width: 38%;
-  padding: 0.5vw;
-  border-radius: 2vw;
-  border: none;
-  outline: none;
-  margin-right: 2%;
-}
-
-#blurBackground {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 0;
-  /* padding: 4vw; */
-}
-
-#blurBackground video {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  filter: blur(5px);
-}
-
-#footer {
-  height: 10%;
-  width: 100%;
-  background-color: #161616;
-  color: #fff;
-  /* padding: 3vw 3vw; */
-  /* font-family: 'Arial', sans-serif; */
-  position: fixed;
-  bottom: 0;
-}
-
-.footer-container {
-  height: 60%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* gap: 3vw; */
-
-}
-
-.footer-section {
-  height: 100%;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 1vw 2vw;
-}
-
-.footer-section h2 {
-  font-family: Telma-Regular;
-  letter-spacing: 2px;
-  letter-spacing: 4px;
-}
-
-.footer-section p {
-  font-size: 0.6vw;
-  letter-spacing: 2px;
-  font-family: Supreme-Regular;
-}
-
-.footer-section-Details {
-  height: 100%;
-  width: 40%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-right: 2vw;
-  font-weight: 400;
-}
-
-.footer-section-Details h4 {
-  font-family: Supreme-Regular;
-  letter-spacing: 2px;
-  font-weight: 200;
-}
-
-.footer-bottom {
-  height: 40%;
-  border-top: 1px solid #444;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* flex-wrap: wrap; */
-  font-family: Supreme-Regular;
-  letter-spacing: 2px;
-}
-
-.social-icons a {
-  color: #ddd;
-  margin: 0 0.5vw;
-  font-size: 1.5vw;
-  text-decoration: none;
-}
-
-.social-icons a:hover {
-  color: #f5a623;
-}
-
-
-
-#page5 {
-  height: 100%;
-  width: 100%;
-  padding: 5vw 4vw;
-  position: relative;
-  padding: 5vw 2vw;
-}
-
-#page5>h1 {
-  text-align: center;
-  font-size: 3vw;
-  font-family: Britney_Regular;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin-bottom: 5vh;
-  width: fit-content;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#page5>h1:hover {
-  text-decoration: underline;
-  color: pink; /* A soft pink */
-  font-size: 3.5vw;
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.1) rotate(-4deg);
-  text-shadow: 3px 3px 10px rgba(255, 105, 180, 0.5), 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.elem {
-  height: 15vh;
-  width: 100%;
-  border-top: 2px solid #000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1vw 2vw;
-  position: relative;
-  transition: all ease-in 0.7s;
-  cursor: pointer;
-}
-
-.elem img {
-  height: 100px;
-  width: 100px;
-  position: absolute;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 50%;
-  transition: all ease-in 0.7s;
-  opacity: 0;
-  left: 12%;
-  /* border: 2px solid black; */
-}
-
-.elem:nth-last-child(1) {
-  border-bottom: 2px solid #000;
-}
-
-.elem:nth-last-child(odd) img {
-  left: 40%;
-}
-
-.elem:hover {
-  background-color: pink;
-  opacity: 0.9;
-  color: #000;
-}
-
-.elem:hover img {
-  opacity: 1;
-  left: 30%;
-}
-
-.elem h2 {
-  font-family: Supreme_Regular;
-  font-size: 2.2vw;
-  font-weight: 500;
-  text-transform: uppercase;
-  width: 6%;
-  letter-spacing: 2px;
-}
-
-.elem-part2 {
-  width: 45%;
-}
-
-.elem-part2 h3 {
-  font-size: 2.2vw;
-  font-weight: 400;
-}
-
-.elem-part2 h5 {
-  font-size: 0.8vw;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-
-#card-section {
-  width: 100vw;
-  padding: 4vw 2vw;
-}
-
-.category-card {
-  width: 100%;
-  position: relative;
-}
-
-.card-category-diff {
-  overflow: hidden;
-  margin-bottom: 4vw;
-  white-space: nowrap;
-}
-
-.card-category-diff:nth-last-child(1) {
-  margin-bottom: 0;
-}
-
-.card-category-diff > h2 {
-  width: fit-content;
-  font-family: Britney_Regular;
-  font-size: 3vw;
-  font-weight: 500;
-  margin-bottom: 1vw;
-  text-align: start;
-  margin-left: auto;
-  margin-right: auto;
-  /* -webkit-text-stroke: 0.5px black; */
-  /* text-decoration: underline; */
-}
-
-.card-category-diff > h2:hover {
-  text-decoration: underline;
-  color: rgba(255, 192, 203, 0.914); /* A soft pink */
-  font-size: 3.5vw;
-  transition: all 0.3s ease-in-out;
-  transform: scale(1.1) rotate(-4deg);
-  text-shadow: 3px 3px 10px rgba(255, 105, 180, 0.5), 0 0 5px rgba(0, 0, 0, 0.3);
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-
-
-.card-track {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll 10s linear infinite;
-}
-
-.card-track:hover {
-  animation-play-state: paused;
-}
-
-.card {
-  height: 60vh;
-  display: inline-block;
-  vertical-align: top;
-  width: 22vw;
-  margin-right: 1vw;
-  border: 2px solid rgb(27, 26, 26);
-  padding: 1vw;
-  border-radius: 16px;
-  box-sizing: border-box;
-  cursor: pointer;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px); /* Increased blur for better effect */
-  -webkit-backdrop-filter: blur(10px); /* Webkit support */
-  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-}
-
-.card img {
-  height: 70%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 10%;
-  object-position: center;
-  border: 1px solid #000;
-}
-
-.card h5 {
-  text-align: right;
-}
-
-.card > h5:first-of-type {
-  text-align: left;
-}
-
-.card > h5:nth-of-type(2) {
-  text-align: right;
-}
-
-.card p {
-  display: flex;
-  height: auto;
-  width: 100%;
-  white-space: normal;
-  text-align: start;
-  font-size: 1vw;
-  font-weight: 600;
-  /* overflow: scroll; */
-  margin-bottom: 1vw;
-}
-
-.card:hover {
-  height: 65vh;
-  width: 23vw;
-  background-color: #000;
-  color: #fff;
-  transition: all ease-in 0.5s;
-  z-index: 2;
-}
-
-.card h3{
-  font-family: Britney_Regular;
-}
-
-@keyframes scroll {
+/* Drop-in animation already declared in your global CSS */
+@keyframes dropIn {
   0% {
-    transform: translateX(0%);
+    transform: translateY(-100%);
+    opacity: 0;
   }
+
   100% {
-    transform: translateX(-50%);
+    transform: translateY(0);
+    opacity: 1;
   }
-}
-
-.cursor-bubble {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: rgba(0, 123, 255, 0.6);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.5s ease-out;
-  z-index: 2;
-}
-
-.cursor-bubble:on-click{
-  
 }
